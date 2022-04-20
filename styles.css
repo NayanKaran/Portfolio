@@ -41,7 +41,7 @@ body > section {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-clip:padding-box;
+  background-clip: padding-box;
   border-bottom-left-radius: 75px;
 }
 
@@ -50,7 +50,7 @@ body > section {
   gap: 10px;
 }
 
-main {
+article {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -58,7 +58,7 @@ main {
   padding: 114px 24px;
 }
 
-main > header {
+article > header {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
@@ -66,21 +66,21 @@ main > header {
   padding: 0;
 }
 
-main > div {
+article > div {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #344563;
 }
 
-main > footer {
+article > footer {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: #7f8cff;
 }
 
-main > footer > div {
+article > footer > div {
   padding-top: 12px;
   display: flex;
   gap: 20px;
