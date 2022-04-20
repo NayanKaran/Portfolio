@@ -12,7 +12,7 @@ header {
 }
 
 #logo {
-  padding-left: 12px;
+  padding-left: 24px;
   padding-right: 12px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -30,8 +30,19 @@ body {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   flex-direction: column;
-  min-width: 250px;
-  max-width: 800px;
+  background-color: #e5e5e5;
+  margin: 0;
+}
+
+body > section {
+  padding: 8px;
+  background-color: white;
+  background-image: url(./images/background-image.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-clip:padding-box;
+  border-bottom-left-radius: 75px;
 }
 
 .social-media-icons {
