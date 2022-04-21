@@ -42,13 +42,13 @@ header {
 #profile {
   background-image:
     url(./images/background/figures/Group60.svg),
-    url(./images/background/figures/Group56.png),
-    url(./images/background/figures/Group59.png),
-    url(./images/background/figures/Group58.png),
-    url(./images/background/figures/Group57.png),
-    url(./images/background/figures/Ellipse15.png),
-    url(./images/background/figures/Ellipse14.png),
-    url(./images/background/figures/Ellipse8.png);
+    url(./images/background/figures/Group56.svg),
+    url(./images/background/figures/Group59.svg),
+    url(./images/background/figures/Group58.svg),
+    url(./images/background/figures/Group57.svg),
+    url(./images/background/figures/Ellipse15.svg),
+    url(./images/background/figures/Ellipse14.svg),
+    url(./images/background/figures/Ellipse8.svg);
   background-position:
     100% 26px,
     33.33% 56px,
