@@ -1,18 +1,20 @@
+body {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  flex-direction: column;
+  background-color: #e5e5e5;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   padding: 4px;
-}
-
-#menu-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  padding: 8px;
+  background-color: rgb(255, 255, 255);
 }
 
 #logo {
-  padding-left: 24px;
+  padding-left: 20px;
   padding-right: 12px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -25,32 +27,35 @@ header {
   color: #6070ff;
 }
 
-body {
-  display: flex;
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  flex-direction: column;
-  background-color: #e5e5e5;
-  margin: 0;
-}
-
-body > section {
+#menu-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
   padding: 8px;
-  background-color: white;
-  background-image: url(./images/background-image.svg);
-  background-position: center;
-  background-size: contain;
+}
+
+#profile {
+  background-image:
+    url(./images/background/figures/Group60.svg),
+    url(./images/background/figures/Group56.png),
+    url(./images/background/figures/Group59.png),
+    url(./images/background/figures/Group58.png),
+    url(./images/background/figures/Group57.png),
+    url(./images/background/figures/Ellipse15.png),
+    url(./images/background/figures/Ellipse14.png),
+    url(./images/background/figures/Ellipse8.png);
+  background-position:
+    100% 26px,
+    33.33% 56px,
+    0% 12px,
+    81.06% 78%,
+    50% 92.8%,
+    16% 91.55%,
+    80% 211px,
+    57% 18px;
   background-repeat: no-repeat;
-  background-clip: padding-box;
+  background-color: white;
   border-bottom-left-radius: 75px;
-}
-
-.social-media-icons {
-  display: flex;
-  gap: 10px;
-}
-
-article {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -58,7 +63,7 @@ article {
   padding: 114px 24px;
 }
 
-article > header {
+#intro {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
@@ -66,23 +71,33 @@ article > header {
   padding: 0;
 }
 
-article > div {
+#about-me {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #344563;
 }
 
-article > footer {
+#contacts {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: #7f8cff;
 }
 
-article > footer > div {
+#contacts-heading {
+  margin: 8px 0;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#social-media-icons {
   padding-top: 12px;
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
