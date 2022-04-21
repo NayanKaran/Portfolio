@@ -1,9 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   flex-direction: column;
-  background-color: #e5e5e5;
+  background-color: #f7f7f9;
 }
 
 header {
