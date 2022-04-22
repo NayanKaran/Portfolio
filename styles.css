@@ -4,8 +4,9 @@
 }
 
 body {
+  min-width: 277px;
   display: flex;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   flex-direction: column;
   background-color: #f7f7f9;
@@ -83,14 +84,14 @@ header {
   color: #344563;
 }
 
-#contacts {
+.contacts {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: #7f8cff;
 }
 
-#contacts-heading {
+.contacts-heading {
   margin: 8px 0;
 }
 
@@ -100,9 +101,210 @@ ul.no-bullets {
   padding: 0;
 }
 
-#social-media-icons {
+.social-media-icons {
   padding-top: 12px;
   display: flex;
   gap: 20px;
   justify-content: flex-start;
+}
+
+#projects {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  gap: 88px;
+  padding: 114px 24px;
+}
+
+.project {
+  background-color: white;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #dfe1e6;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.project-snapshot {
+  width: 100%;
+  order: -1;
+}
+
+.button {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  width: fit-content;
+  height: 48px;
+  color: #6070ff;
+  background-color: white;
+  border: 1px solid #6070ff;
+  border-radius: 8px;
+  margin: 12px 0;
+  padding: 12px;
+  transition-duration: 0.3s;
+}
+
+.button:hover {
+  background: #6070ff;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+  color: white;
+}
+
+.button:active {
+  background: #2230d2;
+}
+
+.button:disabled {
+  color: #5e6c84;
+  border: 1px solid #c1c7d0;
+  pointer-events: none;
+}
+
+.project-heading {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.dot-seperator {
+  width: 8px;
+  height: 8px;
+}
+
+.project-languages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+}
+
+.project-languages > li {
+  background: #ebebff;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.color-neutrals {
+  color: #7a869a;
+}
+
+.project-description {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+}
+
+#about-myself {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 114px 24px;
+  background-color: white;
+  border-top-right-radius: 75px;
+  gap: 12px;
+}
+
+#about-myself-heading {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #172b4d;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 12px;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  background: #f7f7f9;
+  border-radius: 8px;
+  padding: 9px 12px;
+}
+
+.list-heading {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  padding: 24px 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+hr.solid {
+  border-top: 1px solid #dfe1e6;
+}
+
+.arrow {
+  border: solid #406d98;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
