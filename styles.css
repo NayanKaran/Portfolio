@@ -53,9 +53,9 @@ header {
     100% 26px,
     33.33% 56px,
     0% 12px,
-    81.06% 78%,
-    50% 92.8%,
-    16% 91.55%,
+    bottom 138px right 19%,
+    bottom 26.85px right 50%,
+    bottom 48px right 84%,
     80% 211px,
     57% 18px;
   background-repeat: no-repeat;
@@ -65,7 +65,7 @@ header {
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-  padding: 114px 24px;
+  padding: 114px 24px 136px 24px;
 }
 
 #intro {
