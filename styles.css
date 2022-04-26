@@ -207,7 +207,7 @@ button:disabled {
   color: #6070ff;
 }
 
-.project-languages>li {
+.project-languages > li {
   background: #ebebff;
   padding: 4px 12px;
   border-radius: 8px;
@@ -328,7 +328,6 @@ hr.solid {
 }
 
 #footer h2 {
-  font-family: 'Poppins';
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
