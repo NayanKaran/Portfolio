@@ -308,3 +308,39 @@ hr.solid {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  background-color: #6070ff;
+  border-top-left-radius: 75px;
+}
+
+#footer h2 {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  padding: 103px 0 12px;
+  color: #fff;
+  text-align: center;
+}
+
+#footer p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ebebff;
+  text-align: center;
+  height: 102px;
+}
+
+#footer input {
+  background: white;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 15px 38px 15px 16px;
+}
+
+
