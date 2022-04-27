@@ -180,16 +180,25 @@ button:disabled {
   padding-top: 12px;
   padding-bottom: 12px;
   align-items: center;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
 }
 
-.dot-seperator {
+.project-role,
+.project-year {
+  color: #7a869a;
+}
+
+.project-role::before,
+.project-year::before {
+  content: "";
   width: 8px;
   height: 8px;
+  border-radius: 50%;
+  margin-right: 12px;
+  display: inline-block;
+  background-color: #c1c7d0;
 }
 
 .project-languages {
@@ -211,10 +220,6 @@ button:disabled {
   background: #ebebff;
   padding: 4px 12px;
   border-radius: 8px;
-}
-
-.color-neutrals {
-  color: #7a869a;
 }
 
 .project-description {
