@@ -61,7 +61,7 @@ header {
     57% 18px;
   background-repeat: no-repeat;
   background-color: white;
-  border-bottom-left-radius: 75px;
+  border-bottom-left-radius: 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -226,13 +226,16 @@ button:disabled {
   color: #344563;
 }
 
+#footer {
+  background-color: white;
+  border-top-right-radius: 80px;
+}
+
 #about-myself {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 114px 24px;
-  background-color: white;
-  border-top-right-radius: 75px;
   gap: 12px;
 }
 
@@ -309,7 +312,7 @@ hr.solid {
   -webkit-transform: rotate(45deg);
 }
 
-#footer {
+#contact-form {
   background-image:
     url(./images/background/figures/footer-figure1.svg),
     url(./images/background/figures/footer-figure3.svg),
@@ -318,16 +321,16 @@ hr.solid {
     100% 21px,
     40.8% 55px,
     bottom 48.83px right 12.53%;
+  border-top-left-radius: 80px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   padding: 0 24px;
   padding-bottom: 45px;
   background-color: #6070ff;
-  border-top-left-radius: 75px;
 }
 
-#footer h2 {
+#contact-form h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
@@ -336,7 +339,7 @@ hr.solid {
   text-align: center;
 }
 
-#footer p {
+#contact-form p {
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -345,7 +348,7 @@ hr.solid {
   height: 102px;
 }
 
-#footer input {
+#contact-form input {
   background: white;
   border: 1px solid #cfd8dc;
   border-radius: 8px;
