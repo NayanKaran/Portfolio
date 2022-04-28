@@ -467,23 +467,21 @@ body {
 
   #profile {
     background-image:
-      url(./images/background/figures/Group60.svg),
-      url(./images/background/figures/Group56.svg),
-      url(./images/background/figures/Group59.svg),
-      url(./images/background/figures/Group58.svg),
-      url(./images/background/figures/Group57.svg),
-      url(./images/background/figures/Ellipse15.svg),
-      url(./images/background/figures/Ellipse14.svg),
-      url(./images/background/figures/Ellipse8.svg);
+      url(./images/background/figures/desktop-bg-figure1.svg),
+      url(./images/background/figures/desktop-bg-figure2.svg),
+      url(./images/background/figures/desktop-bg-figure3.svg),
+      url(./images/background/figures/desktop-bg-figure4.svg),
+      url(./images/background/figures/desktop-bg-figure5.svg),
+      url(./images/background/figures/desktop-bg-figure6.svg),
+      url(./images/background/figures/desktop-bg-figure7.svg);
     background-position:
-      100% 26px,
-      33.33% 56px,
-      0% 12px,
-      bottom 138px right 19%,
-      bottom 26.85px right 50%,
-      bottom 48px right 84%,
-      80% 211px,
-      57% 18px;
+      34.6px 69.57px,
+      48% 169px,
+      67% 82px,
+      right 8px top 48px,
+      left 16.18% bottom 77.39px,
+      bottom 76.54px right 38.47%,
+      right 191px bottom 198px;
     background-repeat: no-repeat;
     background-color: white;
     border-bottom-left-radius: 146px;
@@ -496,17 +494,20 @@ body {
 
   #intro {
     font-weight: 700;
-    font-size: 40px;
-    line-height: 52px;
-    color: #172b4d;
+    font-size: 48px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.37px;
+    color: #091e42;
     padding: 0;
   }
 
   #about-me {
     max-width: 920px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 28px;
     color: #344563;
   }
 
@@ -772,13 +773,17 @@ body {
 
   #contact-form {
     background-image:
-      url(./images/background/figures/footer-figure1.svg),
-      url(./images/background/figures/footer-figure3.svg),
-      url(./images/background/figures/footer-figure2.svg);
+      url(./images/background/figures/desktop-bg-footer-figure1.svg),
+      url(./images/background/figures/desktop-bg-footer-figure2.svg),
+      url(./images/background/figures/desktop-bg-footer-figure3.svg),
+      url(./images/background/figures/desktop-bg-footer-figure4.svg),
+      url(./images/background/figures/desktop-bg-footer-figure5.svg);
     background-position:
-      100% 21px,
-      40.8% 55px,
-      bottom 48.83px right 12.53%;
+      left 32.64% top 114px,
+      right 24px top 79px,
+      left 75.4px top 339px,
+      left 23.4% bottom 48.21px,
+      right 16.39% bottom 250px;
     border-top-left-radius: 80px;
     background-repeat: no-repeat;
     display: flex;
