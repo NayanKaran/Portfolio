@@ -16,12 +16,10 @@
   <body>
     <header>
       <div id="logo">Mr. Mandal</div>
-      <nav>
-        <img
-          id="menu-icon"
-          alt="menu icon"
-          src="./images/icons/menu_icon.svg"
-        />
+      <nav id="nav">
+        <a href="#">Portoflio</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
       </nav>
     </header>
     <section id="profile">
@@ -79,7 +77,7 @@
         </ul>
         <button type="button">See Project</button>
       </section>
-      <section class="project">
+      <section class="project right-aligned">
         <h3 class="project-heading">Multi-Post Stories</h3>
         <ul class="project-info">
           <li class="project-name">CANOPY</li>
@@ -87,7 +85,7 @@
           <li class="project-year">2015</li>
         </ul>
         <img
-          class="project-snapshot"
+          class="project-snapshot right-aligned"
           src="./images/project-snapshots/project2.png"
           alt="project preview"
         />
@@ -99,6 +97,7 @@
           <li>html</li>
           <li>cs</li>
           <li>javascript</li>
+          <li class="hidden">Ruby on rails</li>
         </ul>
         <button type="button">See Project</button>
       </section>
@@ -122,10 +121,11 @@
           <li>html</li>
           <li>cs</li>
           <li>javascript</li>
+          <li class="hidden">Ruby on rails</li>
         </ul>
         <button type="button">See Project</button>
       </section>
-      <section class="project">
+      <section class="project right-aligned">
         <h3 class="project-heading">Multi-Post Stories</h3>
         <ul class="project-info">
           <li class="project-name">CANOPY</li>
@@ -133,7 +133,7 @@
           <li class="project-year">2015</li>
         </ul>
         <img
-          class="project-snapshot"
+          class="project-snapshot right-aligned"
           src="./images/project-snapshots/project4.png"
           alt="project preview"
         />
@@ -145,43 +145,51 @@
           <li>html</li>
           <li>css</li>
           <li>javascript</li>
+          <li class="hidden">Ruby on rails</li>
         </ul>
         <button type="button">See Project</button>
       </section>
     </div>
     <footer id="footer">
       <section id="about-myself">
-        <h2 id="about-myself-heading">About Myself</h2>
-        <p id="about-myself-description">
-          Hello I'm a software developer! I can help you build a product ,
-          feature or website Look through some of my work and experience! If you
-          like what you see and have a project you need coded, don't hestiate to
-          contact me.
-        </p>
-        <section class="contacts">
-          <h2 class="contacts-heading">LET'S CONNECT</h2>
-          <ul class="social-media-icons no-bullets">
-            <li>
-              <a href="https://github.com/NayanKaran">
-                <img alt="github icon" src="./images/icons/github_icon.svg" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/debabrata-mandal-83461696/">
-                <img
-                  alt="linkedin icon"
-                  src="./images/icons/linkedin_icon.svg"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/bapidebabrata">
-                <img alt="twitter icon" src="./images/icons/twitter_icon.svg" />
-              </a>
-            </li>
-          </ul>
-        </section>
-        <button type="button">Get my resume</button>
+        <div>
+          <h2 id="about-myself-heading">About Myself</h2>
+          <p id="about-myself-description">
+            Hello I'm a software developer! I can help you build a product ,
+            feature or website Look through some of my work and experience! If
+            you like what you see and have a project you need coded, don't
+            hestiate to contact me.
+          </p>
+          <section class="contacts">
+            <h2 class="contacts-heading">LET'S CONNECT</h2>
+            <ul class="social-media-icons no-bullets">
+              <li>
+                <a href="https://github.com/NayanKaran">
+                  <img alt="github icon" src="./images/icons/github_icon.svg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/debabrata-mandal-83461696/"
+                >
+                  <img
+                    alt="linkedin icon"
+                    src="./images/icons/linkedin_icon.svg"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/bapidebabrata">
+                  <img
+                    alt="twitter icon"
+                    src="./images/icons/twitter_icon.svg"
+                  />
+                </a>
+              </li>
+            </ul>
+          </section>
+          <button type="button" id="resume-button">Get my resume</button>
+        </div>
         <section>
           <h3 class="list-heading">Languages<i class="arrow down"></i></h3>
           <ul class="list">
@@ -201,23 +209,19 @@
               <h4>CSS</h4>
             </li>
           </ul>
-        </section>
-        <hr class="solid hidden" />
-        <section>
+          <hr class="solid hidden" />
           <h3 class="list-heading">Frameworks<i class="arrow right"></i></h3>
-        </section>
-        <hr class="solid" />
-        <section>
+          <hr class="solid" />
           <h3 class="list-heading">Skills<i class="arrow right"></i></h3>
+          <hr class="solid" />
         </section>
-        <hr class="solid" />
       </section>
       <section id="contact-form">
         <h2>Contact me</h2>
         <p>
           If you have an application you are interested in developing, a feature
           that you need built or a project that needs coding. I'd love to help
-          with it
+          with it.
         </p>
         <form action="https://formspree.io/f/xbjwpdqp" method="post">
           <input
