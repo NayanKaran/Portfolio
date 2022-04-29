@@ -15,6 +15,21 @@ body {
   margin: auto;
 }
 
+@keyframes rotate-logo {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#logo {
+  animation-name: rotate-logo;
+  animation-duration: 4s;
+}
+
 @media only screen and (max-width: 767px) {
   /* For mobile phones: */
 
@@ -568,6 +583,10 @@ body {
     grid-row: 1 / 10;
   }
 
+  .project-snapshot:hover {
+    transform: scale(1.05);
+  }
+
   .project-snapshot.right-aligned {
     width: 100%;
     grid-column: 2 / 3;
@@ -863,6 +882,14 @@ body {
     font-size: 15px;
     line-height: 24px;
     color: #b3bac5;
+  }
+
+  input:hover::placeholder {
+    transform: translate(5px);
+  }
+
+  textarea:hover::placeholder {
+    transform: translate(5px);
   }
 
   .form-button {
