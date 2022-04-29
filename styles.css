@@ -15,6 +15,16 @@ body {
   margin: auto;
 }
 
+@keyframes rotate-logo {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+#logo {
+  animation-name: rotate-logo;
+  animation-duration: 4s;
+}
+
 @media only screen and (max-width: 767px) {
   /* For mobile phones: */
 
