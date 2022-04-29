@@ -568,6 +568,10 @@ body {
     grid-row: 1 / 10;
   }
 
+  .project-snapshot:hover {
+    transform: scale(1.05);
+  }
+
   .project-snapshot.right-aligned {
     width: 100%;
     grid-column: 2 / 3;
