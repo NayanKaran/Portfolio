@@ -869,6 +869,14 @@ body {
     color: #b3bac5;
   }
 
+  input:hover::placeholder {
+    transform: translate(5px);
+  }
+
+  textarea:hover::placeholder {
+    transform: translate(5px);
+  }
+
   .form-button {
     display: flex;
     border: 1px solid #cfd8dc;
