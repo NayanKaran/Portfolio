@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Portfolio
 
 > This project is to show author's skills.
@@ -8,6 +6,10 @@
 
 - HTML, CSS
 - Webhint, Stylelint, Github Actions
+
+## Live Demo
+
+[https://nayankaran.github.io/Portfolio/](https://nayankaran.github.io/Portfolio/)
 
 ## Getting Started
 
