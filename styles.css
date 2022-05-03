@@ -31,6 +31,10 @@ body {
   animation-duration: 1s;
 }
 
+.list-items img {
+  order:  -1;
+}
+
 @media only screen and (max-width: 767px) {
   /* For mobile phones: */
 
