@@ -52,7 +52,7 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #5664e5;
+    color: #4c5ace;
   }
 
   #nav {
@@ -117,7 +117,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #7f8cff;
+    color: #606bc3;
   }
 
   .contacts-heading {
@@ -168,9 +168,9 @@ body {
     line-height: 24px;
     width: fit-content;
     height: 48px;
-    color: #5664e5;
+    color: #4c5ace;
     background-color: white;
-    border: 1px solid #5664e5;
+    border: 1px solid #4c5ace;
     border-radius: 8px;
     margin: 12px 0;
     padding: 12px;
@@ -178,7 +178,7 @@ body {
   }
 
   button:hover {
-    background: #5664e5;
+    background: #4c5ace;
     box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
     color: white;
   }
@@ -216,7 +216,7 @@ body {
 
   .project-role,
   .project-year {
-    color: #7a869a;
+    color: #677283;
   }
 
   .project-role::before,
@@ -242,7 +242,7 @@ body {
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.03em;
-    color: #5664e5;
+    color: #4c5ace;
   }
 
   .project-languages > li {
@@ -361,7 +361,7 @@ body {
     flex-direction: column;
     padding: 0 24px;
     padding-bottom: 45px;
-    background-color: #5664e5;
+    background-color: #4c5ace;
   }
 
   #contact-form h2 {
@@ -458,7 +458,7 @@ body {
     margin-top: 16px;
     margin-bottom: 16px;
     margin-left: 143px;
-    color: #5664e5;
+    color: #4c5ace;
   }
 
   #nav {
@@ -530,7 +530,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #7f8cff;
+    color: #606bc3;
   }
 
   .contacts-heading {
@@ -601,9 +601,9 @@ body {
     line-height: 24px;
     width: fit-content;
     height: 48px;
-    color: #5664e5;
+    color: #4c5ace;
     background-color: white;
-    border: 1px solid #5664e5;
+    border: 1px solid #4c5ace;
     border-radius: 8px;
     margin-left: 24px;
     margin-top: 40px;
@@ -612,7 +612,7 @@ body {
   }
 
   button:hover {
-    background: #5664e5;
+    background: #4c5ace;
     box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
     color: white;
   }
@@ -651,7 +651,7 @@ body {
 
   .project-role,
   .project-year {
-    color: #7a869a;
+    color: #677283;
   }
 
   .project-role::before,
@@ -677,7 +677,7 @@ body {
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.03em;
-    color: #5664e5;
+    color: #4c5ace;
     padding-left: 24px;
   }
 
@@ -808,7 +808,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 142px 0 127px 0;
-    background-color: #5664e5;
+    background-color: #4c5ace;
   }
 
   #contact-form h2 {
