@@ -17,17 +17,18 @@ body {
 
 @keyframes rotate-logo {
   from {
-    transform: rotate(0deg);
+    top: -1000px;
   }
 
   to {
-    transform: rotate(360deg);
+    top: 0;
   }
 }
 
 #logo {
+  position: relative;
   animation-name: rotate-logo;
-  animation-duration: 4s;
+  animation-duration: 1s;
 }
 
 @media only screen and (max-width: 767px) {
