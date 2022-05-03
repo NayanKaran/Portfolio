@@ -17,22 +17,26 @@ body {
 
 @keyframes rotate-logo {
   from {
-    transform: rotate(0deg);
+    top: -1000px;
   }
 
   to {
-    transform: rotate(360deg);
+    top: 0;
   }
 }
 
 #logo {
+  position: relative;
   animation-name: rotate-logo;
-  animation-duration: 4s;
+  animation-duration: 1s;
+}
+
+.list-items img {
+  order: -1;
 }
 
 @media only screen and (max-width: 767px) {
   /* For mobile phones: */
-
   header {
     display: flex;
     justify-content: space-between;
@@ -52,7 +56,7 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #6070ff;
+    color: #4c5ace;
   }
 
   #nav {
@@ -117,7 +121,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #7f8cff;
+    color: #606bc3;
   }
 
   .contacts-heading {
@@ -168,9 +172,9 @@ body {
     line-height: 24px;
     width: fit-content;
     height: 48px;
-    color: #6070ff;
+    color: #4c5ace;
     background-color: white;
-    border: 1px solid #6070ff;
+    border: 1px solid #4c5ace;
     border-radius: 8px;
     margin: 12px 0;
     padding: 12px;
@@ -178,7 +182,7 @@ body {
   }
 
   button:hover {
-    background: #6070ff;
+    background: #4c5ace;
     box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
     color: white;
   }
@@ -216,7 +220,7 @@ body {
 
   .project-role,
   .project-year {
-    color: #7a869a;
+    color: #677283;
   }
 
   .project-role::before,
@@ -242,7 +246,7 @@ body {
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.03em;
-    color: #6070ff;
+    color: #4c5ace;
   }
 
   .project-languages > li {
@@ -361,7 +365,7 @@ body {
     flex-direction: column;
     padding: 0 24px;
     padding-bottom: 45px;
-    background-color: #6070ff;
+    background-color: #4c5ace;
   }
 
   #contact-form h2 {
@@ -458,7 +462,7 @@ body {
     margin-top: 16px;
     margin-bottom: 16px;
     margin-left: 143px;
-    color: #6070ff;
+    color: #4c5ace;
   }
 
   #nav {
@@ -478,6 +482,10 @@ body {
     text-align: center;
     color: #344563;
     text-decoration: none;
+  }
+
+  #nav a:hover {
+    border-bottom: 1px solid #344563;
   }
 
   #profile {
@@ -530,7 +538,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #7f8cff;
+    color: #606bc3;
   }
 
   .contacts-heading {
@@ -601,9 +609,9 @@ body {
     line-height: 24px;
     width: fit-content;
     height: 48px;
-    color: #6070ff;
+    color: #4c5ace;
     background-color: white;
-    border: 1px solid #6070ff;
+    border: 1px solid #4c5ace;
     border-radius: 8px;
     margin-left: 24px;
     margin-top: 40px;
@@ -612,7 +620,7 @@ body {
   }
 
   button:hover {
-    background: #6070ff;
+    background: #4c5ace;
     box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
     color: white;
   }
@@ -651,7 +659,7 @@ body {
 
   .project-role,
   .project-year {
-    color: #7a869a;
+    color: #677283;
   }
 
   .project-role::before,
@@ -677,7 +685,7 @@ body {
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.03em;
-    color: #6070ff;
+    color: #4c5ace;
     padding-left: 24px;
   }
 
@@ -808,7 +816,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 142px 0 127px 0;
-    background-color: #6070ff;
+    background-color: #4c5ace;
   }
 
   #contact-form h2 {
