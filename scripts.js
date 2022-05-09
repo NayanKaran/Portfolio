@@ -1,9 +1,9 @@
 function showTheMenu() {
   document.getElementById('overlay').style.display = 'flex';
   document.getElementById('overlay-bg').style.display = 'block';
-  document.getElementById('header').style.filter = 'blur(6px)';
-  document.getElementById('profile').style.filter = 'blur(6px)';
-  document.getElementById('projects').style.filter = 'blur(6px)';
+  document.getElementById('header').style.filter = 'blur(7px)';
+  document.getElementById('profile').style.filter = 'blur(7px)';
+  document.getElementById('projects').style.filter = 'blur(7px)';
 }
 
 function hideTheMenu() {
