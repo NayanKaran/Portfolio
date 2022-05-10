@@ -75,44 +75,57 @@ for (let i=0; i<projectsDetails.length; i+=1) {
 
   let projectInfo = document.createElement('ul');
   projectInfo.className = 'project-info';
-  
+
   let projectName = document.createElement('li');
   projectName.className = 'project-name';
   projectName.textContent = projectsDetails[i].info[0];
   projectInfo.appendChild(projectName);
-  
+
   let projectRole = document.createElement('li');
   projectRole.className = 'project-role';
   projectRole.textContent = projectsDetails[i].info[1];
   projectInfo.appendChild(projectRole);
-  
+
   let projectYear = document.createElement('li');
   projectYear.className = 'project-year';
   projectYear.textContent = projectsDetails[i].info[2];
   projectInfo.appendChild(projectYear);
-  
+
   projectSection.appendChild(projectInfo);
-  
-  
-/*
-<section class="project">
-        <img class="project-snapshot" src="./images/project-snapshots/project1.png" alt="project snapshot">
-        <p class="project-description">
-          A daily selection of privately personalized reads; no accounts or
-          sign-ups required.
-        </p>
-        <ul class="project-languages">
-          <li>html</li>
-          <li>css</li>
-          <li>javascript</li>
-        </ul>
-        <button type="button">See Project</button>
-      </section>
-*/
+
+  let projectImage = document.createElement('img');
+  projectImage.classList.add('project-snapshot');
+  projectImage.src = projectsDetails[i].featured_image;
+  projectImage.alt = "Project snapshot";
+  if (i % 2 != 0){
+    projectImage.classList.add('right-aligned');
+  }
+  projectSection.appendChild(projectImage);
+
+  let projectDescription = document.createElement('p');
+  projectDescription.className = 'project-description';
+  projectDescription.textContent = projectsDetails[i].description;
+  projectSection.appendChild(projectDescription);
+
+  let technologies = document.createElement('ul');
+  technologies.className = 'project-languages';
+
+
+for (let j=0; j<projectsDetails[j].technologies.length; j+=1) {
+  let technology = document.createElement('li');
+  technology.textContent = projectsDetails[i].technologies[j];
+  technologies.appendChild(technology);
+}
+  projectSection.appendChild(technologies);
+
+
+  let seeProjectButton = document.createElement('button');
+  seeProjectButton.type = 'button';
+  seeProjectButton.textContent = "See Project";
+  projectSection.appendChild(seeProjectButton);
 
 
 document.querySelector("#projects").appendChild(projectSection);
 
 
-} 
-
+}
