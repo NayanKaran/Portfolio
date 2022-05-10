@@ -106,7 +106,7 @@ for (let i = 0; i < projectsDetails.length; i += 1) {
   technologies.className = 'project-languages';
 
 
-  for (let j = 0; j < projectsDetails[j].technologies.length; j += 1) {
+  for (let j = 0; j < projectsDetails[i].technologies.length; j += 1) {
     let technology = document.createElement('li');
     technology.textContent = projectsDetails[i].technologies[j];
     technologies.appendChild(technology);
@@ -123,32 +123,18 @@ for (let i = 0; i < projectsDetails.length; i += 1) {
   document.querySelector("#projects").appendChild(projectSection);
 }
 
+function hideProjectDetailsPopup() {
+  document.querySelector("#popup-overlay").style.display = 'none';
+  document.querySelector("#details-popup").style.display = 'none';
+}
 
-function showProjectDetailsPopup() {
-  /*
-  <div>
-    <div id="popup-overlay"">
-    </div>
-    <div id="details-popup">
-      <div>
-        <h3>
-        </h3>
-        <img >
-      </div>
-      <div></div>
-      <img>
-      <div>
-        <p></p>
-        <div>
-          <div></div>
-          <hr>
-          <div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  */
+function showProjectDetailsPopup(i) {
+   if(!!document.getElementById('popup-container') == true ){
+      document.getElementById('popup-container').remove();
+   }
+
   let projectDetailsPopupContainer = document.createElement('div');
+  projectDetailsPopupContainer.id = 'popup-container';
   let projectDetailsPopupOverlay = document.createElement('div');
   projectDetailsPopupOverlay.id = 'popup-overlay';
   projectDetailsPopupOverlay.style.display = 'block';
@@ -157,15 +143,105 @@ function showProjectDetailsPopup() {
   projectDetailsPopup.id = "details-popup";
   projectDetailsPopup.style.display = 'flex';
   projectDetailsPopupContainer.appendChild(projectDetailsPopup);
-  document.body.appendChild(projectDetailsPopupContainer);
-}
 
-function hideProjectDetailsPopup() {
+
+  let popupHeader = document.createElement('div');
+
+  let popupHeaderTitle = document.createElement('h3');
+  popupHeaderTitle.textContent = projectsDetails[i].title;
+  popupHeader.appendChild(popupHeaderTitle);
+
+  let popupHeaderCloseButton = document.createElement('img');
+  popupHeaderCloseButton.src = "./images/icons/close-icon-gray.svg";
+  popupHeaderCloseButton.alt = "close popup window";
+
+  popupHeader.appendChild(popupHeaderCloseButton);
+
+  projectDetailsPopup.appendChild(popupHeader);
+
+  let projectInfo = document.createElement('ul');
+  projectInfo.className = 'project-info';
+
+  let projectName = document.createElement('li');
+  projectName.className = 'project-name';
+  projectName.textContent = projectsDetails[i].info[0];
+  projectInfo.appendChild(projectName);
+
+  let projectRole = document.createElement('li');
+  projectRole.className = 'project-role';
+  projectRole.textContent = projectsDetails[i].info[1];
+  projectInfo.appendChild(projectRole);
+
+  let projectYear = document.createElement('li');
+  projectYear.className = 'project-year';
+  projectYear.textContent = projectsDetails[i].info[2];
+  projectInfo.appendChild(projectYear);
+
+  projectDetailsPopup.appendChild(projectInfo);
+
+
+  let popupImage = document.createElement('img');
+  popupImage.src = projectsDetails[i].featured_image;
+  popupImage.alt = "Project snapshot";
+
+  projectDetailsPopup.appendChild(popupImage);
+
+  let popupDescription = document.createElement('div');
+
+
+  let popupTextDescription = document.createElement('p');
+  popupTextDescription.textContent = projectsDetails[i].description;
+  popupDescription.appendChild(popupTextDescription);
+
+  let popupDetails = document.createElement('div');
+
+  let popupTechnologies = document.createElement('div');
+
+  let technologies = document.createElement('ul');
+  technologies.className = 'project-languages';
+
+  for (let j = 0; j < projectsDetails[i].technologies.length; j += 1) {
+    let technology = document.createElement('li');
+    technology.textContent = projectsDetails[i].technologies[j];
+    technologies.appendChild(technology);
+  }
+  popupTechnologies.appendChild(technologies);
+
+  popupDetails.appendChild(popupTechnologies);
+
+  let popupSeparator = document.createElement('hr');
+  popupDetails.appendChild(popupSeparator);
+
+  let popupButtons = document.createElement('div');
+
+  let popupButton1 = document.createElement('button');
+  popupButton1.textContent = "See live";
+  let popupButton1Icon = document.createElement('i');
+  popupButton1Icon.classList.add("link-icon");
+  popupButton1.appendChild(popupButton1Icon);
+  popupButtons.appendChild(popupButton1);
+
+  let popupButton2 = document.createElement('button');
+  popupButton2.textContent = "See Source";
+  let popupButton2Icon = document.createElement('i');
+  popupButton2Icon.classList.add("github-icon");
+  popupButton2.appendChild(popupButton2Icon);
+  popupButtons.appendChild(popupButton2);
+
+  popupDetails.appendChild(popupButtons);
+
+  popupDescription.appendChild(popupDetails);
+
+  projectDetailsPopup.appendChild(popupDescription);
+
+  document.body.appendChild(projectDetailsPopupContainer);
+  popupHeaderCloseButton.addEventListener('click',hideProjectDetailsPopup);
 
 }
 
 const seeProjectButtons = document.getElementsByClassName('see-project-button');
-console.log(document.getElementsByClassName('see-project-button').length);
 for (let i = 0; i < seeProjectButtons.length; i += 1) {
-  seeProjectButtons[i].addEventListener('click', showProjectDetailsPopup);
+  seeProjectButtons[i].addEventListener('click', function() {
+    showProjectDetailsPopup(i);
+  })
 }
