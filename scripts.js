@@ -1,17 +1,11 @@
 function showTheMenu() {
   document.getElementById('overlay').style.display = 'flex';
   document.getElementById('overlay-bg').style.display = 'block';
-  document.getElementById('header').style.filter = 'blur(7px)';
-  document.getElementById('profile').style.filter = 'blur(7px)';
-  document.getElementById('projects').style.filter = 'blur(7px)';
 }
 
 function hideTheMenu() {
   document.getElementById('overlay').style.display = 'none';
   document.getElementById('overlay-bg').style.display = 'none';
-  document.getElementById('header').style.filter = 'blur(0px)';
-  document.getElementById('profile').style.filter = 'blur(0px)';
-  document.getElementById('projects').style.filter = 'blur(0px)';
 }
 
 const navElement = document.getElementById('nav');
@@ -27,46 +21,46 @@ for (let i = 0; i < menuLinks.length; i += 1) {
 
 let projectsDetails = [
   {
-    title : "Tonic",
-    info : ["CANOPY", "Back End Dev", "2015"],
-    featured_image : "./images/project-snapshots/project1.png",
-    description : "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    technologies : ["html", "css", "javascript"],
-    link_to_Source : "#",
-    link_to_live_version : "#"
+    title: "Tonic",
+    info: ["CANOPY", "Back End Dev", "2015"],
+    featured_image: "./images/project-snapshots/project1.png",
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    technologies: ["html", "css", "javascript"],
+    link_to_Source: "#",
+    link_to_live_version: "#"
   },
   {
-    title : "Tonic",
-    info : ["CANOPY", "Back End Dev", "2015"],
-    featured_image : "./images/project-snapshots/project1.png",
-    description : "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    technologies : ["html", "css", "javascript"],
-    link_to_Source : "#",
-    link_to_live_version : "#"
+    title: "Tonic",
+    info: ["CANOPY", "Back End Dev", "2015"],
+    featured_image: "./images/project-snapshots/project1.png",
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    technologies: ["html", "css", "javascript"],
+    link_to_Source: "#",
+    link_to_live_version: "#"
   },
   {
-    title : "Tonic",
-    info : ["CANOPY", "Back End Dev", "2015"],
-    featured_image : "./images/project-snapshots/project1.png",
-    description : "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    technologies : ["html", "css", "javascript"],
-    link_to_Source : "#",
-    link_to_live_version : "#"
+    title: "Tonic",
+    info: ["CANOPY", "Back End Dev", "2015"],
+    featured_image: "./images/project-snapshots/project1.png",
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    technologies: ["html", "css", "javascript"],
+    link_to_Source: "#",
+    link_to_live_version: "#"
   },
   {
-    title : "Tonic",
-    info : ["CANOPY", "Back End Dev", "2015"],
-    featured_image : "./images/project-snapshots/project1.png",
-    description : "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    technologies : ["html", "css", "javascript"],
-    link_to_Source : "#",
-    link_to_live_version : "#"
+    title: "Tonic",
+    info: ["CANOPY", "Back End Dev", "2015"],
+    featured_image: "./images/project-snapshots/project1.png",
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    technologies: ["html", "css", "javascript"],
+    link_to_Source: "#",
+    link_to_live_version: "#"
   }
 ]
 
-for (let i=0; i<projectsDetails.length; i+=1) {
+for (let i = 0; i < projectsDetails.length; i += 1) {
   let projectSection = document.createElement('section');
-  projectSection.className = 'project';
+  projectSection.classList.add('project');
 
   let projectTitle = document.createElement('h3');
   projectTitle.className = 'project-heading';
@@ -97,8 +91,9 @@ for (let i=0; i<projectsDetails.length; i+=1) {
   projectImage.classList.add('project-snapshot');
   projectImage.src = projectsDetails[i].featured_image;
   projectImage.alt = "Project snapshot";
-  if (i % 2 != 0){
+  if (i % 2 != 0) {
     projectImage.classList.add('right-aligned');
+    projectSection.classList.add('right-aligned');
   }
   projectSection.appendChild(projectImage);
 
@@ -111,21 +106,66 @@ for (let i=0; i<projectsDetails.length; i+=1) {
   technologies.className = 'project-languages';
 
 
-for (let j=0; j<projectsDetails[j].technologies.length; j+=1) {
-  let technology = document.createElement('li');
-  technology.textContent = projectsDetails[i].technologies[j];
-  technologies.appendChild(technology);
-}
+  for (let j = 0; j < projectsDetails[j].technologies.length; j += 1) {
+    let technology = document.createElement('li');
+    technology.textContent = projectsDetails[i].technologies[j];
+    technologies.appendChild(technology);
+  }
   projectSection.appendChild(technologies);
 
 
   let seeProjectButton = document.createElement('button');
   seeProjectButton.type = 'button';
   seeProjectButton.textContent = "See Project";
+  seeProjectButton.classList.add('see-project-button');
   projectSection.appendChild(seeProjectButton);
 
+  document.querySelector("#projects").appendChild(projectSection);
+}
 
-document.querySelector("#projects").appendChild(projectSection);
 
+function showProjectDetailsPopup() {
+  /*
+  <div>
+    <div id="popup-overlay"">
+    </div>
+    <div id="details-popup">
+      <div>
+        <h3>
+        </h3>
+        <img >
+      </div>
+      <div></div>
+      <img>
+      <div>
+        <p></p>
+        <div>
+          <div></div>
+          <hr>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  */
+  let projectDetailsPopupContainer = document.createElement('div');
+  let projectDetailsPopupOverlay = document.createElement('div');
+  projectDetailsPopupOverlay.id = 'popup-overlay';
+  projectDetailsPopupOverlay.style.display = 'block';
+  projectDetailsPopupContainer.appendChild(projectDetailsPopupOverlay);
+  let projectDetailsPopup = document.createElement('div');
+  projectDetailsPopup.id = "details-popup";
+  projectDetailsPopup.style.display = 'flex';
+  projectDetailsPopupContainer.appendChild(projectDetailsPopup);
+  document.body.appendChild(projectDetailsPopupContainer);
+}
 
+function hideProjectDetailsPopup() {
+
+}
+
+const seeProjectButtons = document.getElementsByClassName('see-project-button');
+console.log(document.getElementsByClassName('see-project-button').length);
+for (let i = 0; i < seeProjectButtons.length; i += 1) {
+  seeProjectButtons[i].addEventListener('click', showProjectDetailsPopup);
 }
