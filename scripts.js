@@ -151,9 +151,7 @@ function showProjectDetailsPopup(i) {
   const projectDetailsPopup = document.createElement('div');
   projectDetailsPopup.id = 'details-popup';
   projectDetailsPopup.style.display = 'flex';
-  console.log(projectDetailsPopup.style.top);
-  projectDetailsPopup.style.top = '' + window.pageYOffset + 'px';
-  console.log(window.pageYOffset, projectDetailsPopup.style.top);
+  projectDetailsPopup.style.top = `${window.pageYOffset}px`;
   projectDetailsPopupContainer.appendChild(projectDetailsPopup);
 
   const popupHeader = document.createElement('div');
@@ -258,7 +256,7 @@ function showProjectDetailsPopup(i) {
   popupDescription.appendChild(popupDetails);
 
   projectDetailsPopup.appendChild(popupDescription);
-  
+
   document.body.appendChild(projectDetailsPopupContainer);
   popupHeaderCloseButton.addEventListener('click', hideProjectDetailsPopup);
 }
