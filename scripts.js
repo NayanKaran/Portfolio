@@ -271,3 +271,14 @@ for (let i = 0; i < seeProjectButtons.length; i += 1) {
     showProjectDetailsPopup(i);
   });
 }
+
+const contactForm = document.querySelector("#contact-form > form");
+const emailInput = document.querySelector("#client-email")
+const contactFormButton = document.querySelector('#contact-button');
+
+contactForm.addEventListener('submit', (event) => {
+  if (emailInput.value !== emailInput.value.toLowerCase()) {
+    contactFormButton.reportValidity();
+    event.preventDefault();
+  }
+});
