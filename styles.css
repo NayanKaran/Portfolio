@@ -4,7 +4,7 @@
 }
 
 body {
-  min-width: 277px;
+  min-width: 375px;
   display: flex;
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -52,6 +52,39 @@ body {
 
 @media only screen and (max-width: 767px) {
   /* For mobile phones: */
+  button {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    height: 48px;
+    width: fit-content;
+    color: #4c5ace;
+    background-color: white;
+    border: 1px solid #4c5ace;
+    border-radius: 8px;
+    margin: 12px 0;
+    padding: 12px;
+    transition-duration: 0.3s;
+  }
+
+  button:hover {
+    background: #4c5ace;
+    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+    color: white;
+  }
+
+  button:active {
+    background: #2230d2;
+  }
+
+  button:disabled {
+    color: #5e6c84;
+    border: 1px solid #c1c7d0;
+    pointer-events: none;
+  }
+
   #overlay-bg {
     position: fixed;
     display: none;
@@ -88,7 +121,7 @@ body {
   }
 
   #overlay > a {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -99,18 +132,96 @@ body {
     text-decoration: none;
   }
 
-#details-popup {
-  position: fixed;
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-}
+  #details-popup {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: max-content;
+    margin: 16px 16px 0 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    padding: 16px;
+    background: white;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+  }
+
+  #popup-header-title {
+    font-weight: 700;
+    font-size: 32px;
+    color: #172b4d;
+    padding: 2px 0;
+    padding-top: 8px;
+  }
+
+  #popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #popup-header-close-icon {
+    width: 14px;
+    height: 14px;
+    padding: 13px;
+  }
+
+  #popup-description-text {
+    padding-bottom: 12px;
+  }
+
+  .popup-hr {
+    margin: 20px 4px;
+    border: 1px solid #ebecf0;
+  }
+
+  #popup-buttons-container {
+    display: flex;
+    gap: 12px;
+    padding: 4px 8px;
+  }
+
+  #popup-buttons-container > button {
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+    gap: 13px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  #see-live-button {
+    width: calc(100% - 164.03px);
+  }
+
+  #see-live-button > i {
+    width: 18px;
+    height: 18px;
+    background-image: url(./images/icons/popup-link-icon.svg);
+    box-sizing: content-box;
+    background-repeat: no-repeat;
+    align-self: center;
+  }
+
+  #see-source-button > i {
+    width: 18px;
+    height: 18px;
+    background-image: url(./images/icons/popup-github-icon.svg);
+    box-sizing: content-box;
+    background-repeat: no-repeat;
+    align-self: center;
+  }
+
+  #details-popup > img {
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 12px;
+  }
 
   header {
     display: flex;
@@ -237,39 +348,6 @@ body {
   .project-snapshot {
     width: 100%;
     order: -1;
-  }
-
-  button {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 24px;
-    width: fit-content;
-    height: 48px;
-    color: #4c5ace;
-    background-color: white;
-    border: 1px solid #4c5ace;
-    border-radius: 8px;
-    margin: 12px 0;
-    padding: 12px;
-    transition-duration: 0.3s;
-  }
-
-  button:hover {
-    background: #4c5ace;
-    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
-    color: white;
-  }
-
-  button:active {
-    background: #2230d2;
-  }
-
-  button:disabled {
-    color: #5e6c84;
-    border: 1px solid #c1c7d0;
-    pointer-events: none;
   }
 
   .project-heading {
@@ -430,10 +508,7 @@ body {
       url(./images/background/figures/footer-figure1.svg),
       url(./images/background/figures/footer-figure3.svg),
       url(./images/background/figures/footer-figure2.svg);
-    background-position:
-      100% 21px,
-      40.8% 55px,
-      bottom 48.83px right 12.53%;
+    background-position: 100% 21px, 40.8% 55px, bottom 48.83px right 12.53%;
     border-top-left-radius: 80px;
     background-repeat: no-repeat;
     display: flex;
@@ -521,8 +596,155 @@ body {
 
 @media not screen and (max-width: 767px) {
   /* For desktop: */
+
+  button {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    width: fit-content;
+    height: 48px;
+    color: #4c5ace;
+    background-color: white;
+    border: 1px solid #4c5ace;
+    border-radius: 8px;
+    margin-left: 24px;
+    margin-top: 40px;
+    padding: 12px;
+    transition-duration: 0.3s;
+  }
+
+  button:hover {
+    background: #4c5ace;
+    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+    color: white;
+  }
+
+  button:active {
+    background: #2230d2;
+  }
+
+  button:disabled {
+    color: #5e6c84;
+    border: 1px solid #c1c7d0;
+    pointer-events: none;
+  }
+
   #overlay {
     display: none;
+  }
+
+  #popup-description-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #details-popup {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 16px auto 50px auto;
+    height: max-content;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    padding: 16px;
+    background: white;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    max-width: 1156px;
+  }
+
+  #popup-header-title {
+    font-weight: 700;
+    font-size: 32px;
+    color: #172b4d;
+    padding: 2px 0;
+    padding-top: 8px;
+  }
+
+  #popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #popup-header-close-icon {
+    width: 14px;
+    height: 14px;
+    padding: 13px;
+  }
+
+  #popup-description-text {
+    padding-bottom: 12px;
+    max-width: calc(100% - 302px);
+    margin: 0;
+  }
+
+  .popup-hr {
+    margin: 20px 4px;
+    border: 1px solid #ebecf0;
+  }
+
+  #popup-buttons-container {
+    display: flex;
+    gap: 12px;
+    padding: 4px 8px;
+  }
+
+  #popup-buttons-container > button {
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+    gap: 13px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  #see-live-button {
+    width: calc(100% - 164.03px);
+  }
+
+  #popup-project-info-list {
+    padding-left: 0;
+  }
+
+  #see-live-button > i {
+    width: 18px;
+    height: 18px;
+    background-image: url(./images/icons/popup-link-icon.svg);
+    box-sizing: content-box;
+    background-repeat: no-repeat;
+    align-self: center;
+  }
+
+  #see-source-button > i {
+    width: 18px;
+    height: 18px;
+    background-image: url(./images/icons/popup-github-icon.svg);
+    box-sizing: content-box;
+    background-repeat: no-repeat;
+    align-self: center;
+  }
+
+  #details-popup > img {
+    width: 100%;
+    height: 0;
+    box-sizing: border-box;
+    padding-bottom: 568px;
+    margin-top: 24px;
+    margin-bottom: 59px;
+    opacity: 1;
+    color: rgb(255, 255, 255, 0);
+    background-image: url(./images/project-snapshots/project1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
   }
 
   header {
@@ -680,40 +902,6 @@ body {
     grid-row: 1 / 10;
   }
 
-  button {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 24px;
-    width: fit-content;
-    height: 48px;
-    color: #4c5ace;
-    background-color: white;
-    border: 1px solid #4c5ace;
-    border-radius: 8px;
-    margin-left: 24px;
-    margin-top: 40px;
-    padding: 12px;
-    transition-duration: 0.3s;
-  }
-
-  button:hover {
-    background: #4c5ace;
-    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
-    color: white;
-  }
-
-  button:active {
-    background: #2230d2;
-  }
-
-  button:disabled {
-    color: #5e6c84;
-    border: 1px solid #c1c7d0;
-    pointer-events: none;
-  }
-
   .project-heading {
     font-weight: 700;
     font-size: 32px;
@@ -728,8 +916,8 @@ body {
     gap: 12px;
     padding-top: 12px;
     padding-bottom: 12px;
-    padding-left: 24px;
     padding-right: 24px;
+    padding-left: 24px;
     align-items: center;
     font-weight: 600;
     font-size: 13px;
