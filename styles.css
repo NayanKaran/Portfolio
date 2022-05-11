@@ -587,7 +587,7 @@ body {
     color: #b3bac5;
   }
 
-  .form-button {
+  #form-button {
     border: 1px solid #cfd8dc;
     margin: 0;
     margin-top: 22px;
@@ -1168,7 +1168,7 @@ body {
     transform: translate(5px);
   }
 
-  .form-button {
+  #form-button {
     display: flex;
     border: 1px solid #cfd8dc;
     margin: auto;

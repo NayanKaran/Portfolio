@@ -271,3 +271,19 @@ for (let i = 0; i < seeProjectButtons.length; i += 1) {
     showProjectDetailsPopup(i);
   });
 }
+
+const form = document.getElementById('form');
+const emailInput = document.getElementById('client-email');
+const formButton = document.getElementById('form-button');
+
+form.addEventListener('submit', (event) => {
+  if (emailInput.value !== emailInput.value.toLowerCase()) {
+    formButton.setCustomValidity('email-id must be in lower case!');
+    formButton.reportValidity();
+    event.preventDefault();
+  }
+});
+
+emailInput.addEventListener('input', () => {
+  formButton.setCustomValidity('');
+});
