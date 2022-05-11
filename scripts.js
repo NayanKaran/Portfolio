@@ -1,6 +1,5 @@
 function showTheMenu() {
   if (window.screen.width >= 768) {
-    console.log("0");
     return;
   }
   document.getElementById('overlay').style.display = 'flex';
