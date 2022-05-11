@@ -273,12 +273,17 @@ for (let i = 0; i < seeProjectButtons.length; i += 1) {
 }
 
 const contactForm = document.querySelector("#contact-form > form");
-const emailInput = document.querySelector("#client-email")
-const contactFormButton = document.querySelector('#contact-button');
+const emailInput = document.getElementById("client-email")
+const contactFormButton = document.getElementById('contact-button');
 
 contactForm.addEventListener('submit', (event) => {
   if (emailInput.value !== emailInput.value.toLowerCase()) {
+    contactFormButton.setCustomValidity('email-id must be in lower case!');
     contactFormButton.reportValidity();
     event.preventDefault();
   }
+});
+
+emailInput.addEventListener('input', () => {
+  contactFormButton.setCustomValidity('');
 });
