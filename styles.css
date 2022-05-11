@@ -133,7 +133,7 @@ body {
   }
 
   #details-popup {
-    position: fixed;
+    position: absolute;
     display: none;
     flex-direction: column;
     box-sizing: border-box;
@@ -641,7 +641,7 @@ body {
   }
 
   #details-popup {
-    position: fixed;
+    position: absolute;
     display: none;
     flex-direction: column;
     box-sizing: border-box;
