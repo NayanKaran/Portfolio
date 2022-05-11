@@ -745,7 +745,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
-  }
+  border-radius: 8px;}
 
   header {
     display: flex;

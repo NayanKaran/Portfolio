@@ -151,7 +151,12 @@ function showProjectDetailsPopup(i) {
   const projectDetailsPopup = document.createElement('div');
   projectDetailsPopup.id = 'details-popup';
   projectDetailsPopup.style.display = 'flex';
-  projectDetailsPopup.style.top = `${window.pageYOffset}px`;
+  if (window.screen.width >= 768) {
+    projectDetailsPopup.style.top = `${window.pageYOffset + 77}px`;
+  }
+  else {
+    projectDetailsPopup.style.top = `${window.pageYOffset + 16}px`;
+  }
   projectDetailsPopupContainer.appendChild(projectDetailsPopup);
 
   const popupHeader = document.createElement('div');
