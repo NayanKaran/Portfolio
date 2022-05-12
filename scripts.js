@@ -273,7 +273,9 @@ for (let i = 0; i < seeProjectButtons.length; i += 1) {
 }
 
 const form = document.getElementById('form');
+const nameInput = document.getElementById('client-name');
 const emailInput = document.getElementById('client-email');
+const messageInput = document.getElementById('client-message');
 const formButton = document.getElementById('form-button');
 
 form.addEventListener('submit', (event) => {
@@ -286,4 +288,16 @@ form.addEventListener('submit', (event) => {
 
 emailInput.addEventListener('input', () => {
   formButton.setCustomValidity('');
+  contactForm.email = emailInput.value;
+  localStorage.setItem('contactForm', JSON.stringify(contactForm));
+});
+
+nameInput.addEventListener('input', () => {
+  contactForm.name = nameInput.value;
+  localStorage.setItem('contactForm', JSON.stringify(contactForm));
+});
+
+messageInput.addEventListener('input', () => {
+  contactForm.feedbackMessage = messageInput.value;
+  localStorage.setItem('contactForm', JSON.stringify(contactForm));
 });
