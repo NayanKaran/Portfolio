@@ -292,9 +292,8 @@ if (contactForm) {
   nameInput.value = contactForm.name;
   emailInput.value = contactForm.email;
   messageInput.value = contactForm.feedbackMessage;
-}
-else {
-  contactForm = { name: '', email: '', feedbackMessage: '' }
+} else {
+  contactForm = { name: '', email: '', feedbackMessage: '' };
 }
 
 emailInput.addEventListener('input', () => {
