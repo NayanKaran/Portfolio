@@ -286,15 +286,14 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-let contactForm = { name: '', email: '', feedbackMessage: '' };
+let contactForm = JSON.parse(localStorage.getItem('contactForm'));
 
-const retreivedContactFormValues = JSON.parse(localStorage.getItem('contactForm'));
-
-if (retreivedContactFormValues) {
-  contactForm = retreivedContactFormValues;
-  nameInput.value = retreivedContactFormValues.name;
-  emailInput.value = retreivedContactFormValues.email;
-  messageInput.value = retreivedContactFormValues.feedbackMessage;
+if (contactForm) {
+  nameInput.value = contactForm.name;
+  emailInput.value = contactForm.email;
+  messageInput.value = contactForm.feedbackMessage;
+} else {
+  contactForm = { name: '', email: '', feedbackMessage: '' };
 }
 
 emailInput.addEventListener('input', () => {
