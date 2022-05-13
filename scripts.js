@@ -151,17 +151,10 @@ function showProjectDetailsPopup(i) {
   const projectDetailsPopup = document.createElement('div');
   projectDetailsPopup.id = 'details-popup';
   projectDetailsPopup.style.display = 'flex';
-  // if (window.screen.width >= 768) {
-  //   projectDetailsPopup.style.top = `${window.pageYOffset + 77}px`;
-  // } else {
-  //   projectDetailsPopup.style.top = `${window.pageYOffset + 16}px`;
-  // }
-  // 
   projectDetailsPopupContainer.appendChild(projectDetailsPopup);
 
   const popupHeader = document.createElement('div');
   popupHeader.id = 'popup-header';
-
   const popupHeaderTitle = document.createElement('h3');
   popupHeaderTitle.id = 'popup-header-title';
   popupHeaderTitle.textContent = projectsDetails[i].title;
@@ -171,9 +164,7 @@ function showProjectDetailsPopup(i) {
   popupHeaderCloseButton.id = 'popup-header-close-icon';
   popupHeaderCloseButton.src = './images/icons/close-icon-gray.svg';
   popupHeaderCloseButton.alt = 'close popup window';
-
   popupHeader.appendChild(popupHeaderCloseButton);
-
   projectDetailsPopup.appendChild(popupHeader);
 
   const projectInfo = document.createElement('ul');
@@ -262,8 +253,9 @@ function showProjectDetailsPopup(i) {
 
   projectDetailsPopup.appendChild(popupDescription);
   document.body.appendChild(projectDetailsPopupContainer);
-  if (document.querySelector("#details-popup").offsetHeight + 32 > window.innerHeight) {
-    document.querySelector("#details-popup").style.height = `calc(100% - 32px)`;
+
+  if (document.querySelector('#details-popup').offsetHeight + 32 > window.innerHeight) {
+    document.querySelector('#details-popup').style.height = 'calc(100% - 32px)';
   }
   popupHeaderCloseButton.addEventListener('click', hideProjectDetailsPopup);
 }
