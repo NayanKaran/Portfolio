@@ -133,12 +133,13 @@ body {
   }
 
   #details-popup {
-    position: absolute;
+    position: fixed;
+    overflow: auto;
+    height: max-content;
     display: none;
     flex-direction: column;
     box-sizing: border-box;
-    height: max-content;
-    margin: 16px 16px 0 16px;
+    margin: 16px;
     top: 0;
     left: 0;
     right: 0;
@@ -641,12 +642,13 @@ body {
   }
 
   #details-popup {
-    position: absolute;
+    position: fixed;
+    overflow: auto;
+    height: max-content;
     display: none;
     flex-direction: column;
     box-sizing: border-box;
     margin: 16px auto 50px auto;
-    height: max-content;
     top: 0;
     left: 0;
     right: 0;
