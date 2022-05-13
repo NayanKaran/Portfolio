@@ -135,11 +135,11 @@ body {
   #details-popup {
     position: fixed;
     overflow: auto;
-    height: calc(100% - 32px); /* 16px for padding-bottom and 16px for margin-bottom */
+    height: max-content;
     display: none;
     flex-direction: column;
     box-sizing: border-box;
-    margin: 16px 16px 0 16px;
+    margin: 16px;
     top: 0;
     left: 0;
     right: 0;
